@@ -7,19 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27519D772AF9441D00FC48C1 /* AddUpdateReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27519D762AF9441D00FC48C1 /* AddUpdateReminderViewController.swift */; };
+		27519D802AF95E4400FC48C1 /* TaskDetail+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27519D7E2AF95E4400FC48C1 /* TaskDetail+CoreDataClass.swift */; };
+		27519D812AF95E4400FC48C1 /* TaskDetail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27519D7F2AF95E4400FC48C1 /* TaskDetail+CoreDataProperties.swift */; };
+		27519D832AF963B000FC48C1 /* CreateUpdateTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27519D822AF963B000FC48C1 /* CreateUpdateTaskViewModel.swift */; };
+		27519D852AF982F800FC48C1 /* TextViewEmbeddedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27519D842AF982F800FC48C1 /* TextViewEmbeddedTableViewCell.swift */; };
+		27925E2A2AF9D8A10067A342 /* AddUpdateReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27925E292AF9D8A10067A342 /* AddUpdateReminderView.swift */; };
+		2798FD1F2AFA8536006AFC75 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2798FD1E2AFA8536006AFC75 /* WidgetKit.framework */; };
+		2798FD212AFA8536006AFC75 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2798FD202AFA8536006AFC75 /* SwiftUI.framework */; };
+		2798FD242AFA8537006AFC75 /* TaskReminderWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2798FD232AFA8537006AFC75 /* TaskReminderWidgetBundle.swift */; };
+		2798FD262AFA8537006AFC75 /* TaskReminderWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2798FD252AFA8537006AFC75 /* TaskReminderWidgetLiveActivity.swift */; };
+		2798FD282AFA8537006AFC75 /* TaskReminderWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2798FD272AFA8537006AFC75 /* TaskReminderWidget.swift */; };
+		2798FD2A2AFA8538006AFC75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2798FD292AFA8538006AFC75 /* Assets.xcassets */; };
+		2798FD2E2AFA8538006AFC75 /* TaskReminderWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2798FD1C2AFA8536006AFC75 /* TaskReminderWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2798FD342AFA9B3C006AFC75 /* TaskDetail+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27519D7E2AF95E4400FC48C1 /* TaskDetail+CoreDataClass.swift */; };
+		2798FD352AFA9B40006AFC75 /* TaskDetail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27519D7F2AF95E4400FC48C1 /* TaskDetail+CoreDataProperties.swift */; };
+		2798FD382AFAA23D006AFC75 /* TaskDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2798FD372AFAA23D006AFC75 /* TaskDetailModel.swift */; };
+		2798FD392AFAA23D006AFC75 /* TaskDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2798FD372AFAA23D006AFC75 /* TaskDetailModel.swift */; };
+		2798FD3A2AFAA539006AFC75 /* TaskReminderOtherwise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27B5B7C02AF8E27E00242456 /* TaskReminderOtherwise.xcdatamodeld */; };
 		27B5B7B82AF8E27E00242456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5B7B72AF8E27E00242456 /* AppDelegate.swift */; };
 		27B5B7BA2AF8E27E00242456 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5B7B92AF8E27E00242456 /* SceneDelegate.swift */; };
-		27B5B7BC2AF8E27E00242456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5B7BB2AF8E27E00242456 /* ViewController.swift */; };
-		27B5B7BF2AF8E27E00242456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B5B7BD2AF8E27E00242456 /* Main.storyboard */; };
+		27B5B7BC2AF8E27E00242456 /* ReminderHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5B7BB2AF8E27E00242456 /* ReminderHomeViewController.swift */; };
 		27B5B7C22AF8E27E00242456 /* TaskReminderOtherwise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27B5B7C02AF8E27E00242456 /* TaskReminderOtherwise.xcdatamodeld */; };
 		27B5B7C42AF8E28000242456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B5B7C32AF8E28000242456 /* Assets.xcassets */; };
 		27B5B7C72AF8E28000242456 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B5B7C52AF8E28000242456 /* LaunchScreen.storyboard */; };
 		27B5B7D22AF8E28000242456 /* TaskReminderOtherwiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5B7D12AF8E28000242456 /* TaskReminderOtherwiseTests.swift */; };
 		27B5B7DC2AF8E28000242456 /* TaskReminderOtherwiseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5B7DB2AF8E28000242456 /* TaskReminderOtherwiseUITests.swift */; };
 		27B5B7DE2AF8E28000242456 /* TaskReminderOtherwiseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5B7DD2AF8E28000242456 /* TaskReminderOtherwiseUITestsLaunchTests.swift */; };
+		27B5B7EE2AF8FDE700242456 /* TaskReminderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5B7ED2AF8FDE700242456 /* TaskReminderViewModel.swift */; };
+		27B5B7F02AF9076C00242456 /* EachTaskReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5B7EF2AF9076C00242456 /* EachTaskReminderTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2798FD2C2AFA8538006AFC75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27B5B7AC2AF8E27E00242456 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2798FD1B2AFA8536006AFC75;
+			remoteInfo = TaskReminderWidgetExtension;
+		};
 		27B5B7CE2AF8E28000242456 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 27B5B7AC2AF8E27E00242456 /* Project object */;
@@ -36,12 +62,42 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2798FD2F2AFA8538006AFC75 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2798FD2E2AFA8538006AFC75 /* TaskReminderWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		27519D762AF9441D00FC48C1 /* AddUpdateReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateReminderViewController.swift; sourceTree = "<group>"; };
+		27519D7E2AF95E4400FC48C1 /* TaskDetail+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskDetail+CoreDataClass.swift"; sourceTree = "<group>"; };
+		27519D7F2AF95E4400FC48C1 /* TaskDetail+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskDetail+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		27519D822AF963B000FC48C1 /* CreateUpdateTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUpdateTaskViewModel.swift; sourceTree = "<group>"; };
+		27519D842AF982F800FC48C1 /* TextViewEmbeddedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewEmbeddedTableViewCell.swift; sourceTree = "<group>"; };
+		27925E292AF9D8A10067A342 /* AddUpdateReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateReminderView.swift; sourceTree = "<group>"; };
+		2798FD1C2AFA8536006AFC75 /* TaskReminderWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TaskReminderWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2798FD1E2AFA8536006AFC75 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		2798FD202AFA8536006AFC75 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		2798FD232AFA8537006AFC75 /* TaskReminderWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskReminderWidgetBundle.swift; sourceTree = "<group>"; };
+		2798FD252AFA8537006AFC75 /* TaskReminderWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskReminderWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		2798FD272AFA8537006AFC75 /* TaskReminderWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskReminderWidget.swift; sourceTree = "<group>"; };
+		2798FD292AFA8538006AFC75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2798FD2B2AFA8538006AFC75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2798FD372AFAA23D006AFC75 /* TaskDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailModel.swift; sourceTree = "<group>"; };
+		2798FD3B2AFAAC65006AFC75 /* TaskReminderOtherwise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaskReminderOtherwise.entitlements; sourceTree = "<group>"; };
+		2798FD3C2AFAAD2F006AFC75 /* TaskReminderWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaskReminderWidgetExtension.entitlements; sourceTree = "<group>"; };
 		27B5B7B42AF8E27E00242456 /* TaskReminderOtherwise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskReminderOtherwise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B5B7B72AF8E27E00242456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27B5B7B92AF8E27E00242456 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		27B5B7BB2AF8E27E00242456 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		27B5B7BE2AF8E27E00242456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27B5B7BB2AF8E27E00242456 /* ReminderHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderHomeViewController.swift; sourceTree = "<group>"; };
 		27B5B7C12AF8E27E00242456 /* TaskReminderOtherwise.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskReminderOtherwise.xcdatamodel; sourceTree = "<group>"; };
 		27B5B7C32AF8E28000242456 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27B5B7C62AF8E28000242456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,9 +107,20 @@
 		27B5B7D72AF8E28000242456 /* TaskReminderOtherwiseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskReminderOtherwiseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B5B7DB2AF8E28000242456 /* TaskReminderOtherwiseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskReminderOtherwiseUITests.swift; sourceTree = "<group>"; };
 		27B5B7DD2AF8E28000242456 /* TaskReminderOtherwiseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskReminderOtherwiseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		27B5B7ED2AF8FDE700242456 /* TaskReminderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskReminderViewModel.swift; sourceTree = "<group>"; };
+		27B5B7EF2AF9076C00242456 /* EachTaskReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachTaskReminderTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2798FD192AFA8536006AFC75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2798FD212AFA8536006AFC75 /* SwiftUI.framework in Frameworks */,
+				2798FD1F2AFA8536006AFC75 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27B5B7B12AF8E27E00242456 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,12 +145,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2798FD1D2AFA8536006AFC75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2798FD1E2AFA8536006AFC75 /* WidgetKit.framework */,
+				2798FD202AFA8536006AFC75 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2798FD222AFA8537006AFC75 /* TaskReminderWidget */ = {
+			isa = PBXGroup;
+			children = (
+				2798FD232AFA8537006AFC75 /* TaskReminderWidgetBundle.swift */,
+				2798FD252AFA8537006AFC75 /* TaskReminderWidgetLiveActivity.swift */,
+				2798FD272AFA8537006AFC75 /* TaskReminderWidget.swift */,
+				2798FD292AFA8538006AFC75 /* Assets.xcassets */,
+				2798FD2B2AFA8538006AFC75 /* Info.plist */,
+			);
+			path = TaskReminderWidget;
+			sourceTree = "<group>";
+		};
 		27B5B7AB2AF8E27E00242456 = {
 			isa = PBXGroup;
 			children = (
+				2798FD3C2AFAAD2F006AFC75 /* TaskReminderWidgetExtension.entitlements */,
 				27B5B7B62AF8E27E00242456 /* TaskReminderOtherwise */,
 				27B5B7D02AF8E28000242456 /* TaskReminderOtherwiseTests */,
 				27B5B7DA2AF8E28000242456 /* TaskReminderOtherwiseUITests */,
+				2798FD222AFA8537006AFC75 /* TaskReminderWidget */,
+				2798FD1D2AFA8536006AFC75 /* Frameworks */,
 				27B5B7B52AF8E27E00242456 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +185,7 @@
 				27B5B7B42AF8E27E00242456 /* TaskReminderOtherwise.app */,
 				27B5B7CD2AF8E28000242456 /* TaskReminderOtherwiseTests.xctest */,
 				27B5B7D72AF8E28000242456 /* TaskReminderOtherwiseUITests.xctest */,
+				2798FD1C2AFA8536006AFC75 /* TaskReminderWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,14 +193,15 @@
 		27B5B7B62AF8E27E00242456 /* TaskReminderOtherwise */ = {
 			isa = PBXGroup;
 			children = (
+				2798FD3B2AFAAC65006AFC75 /* TaskReminderOtherwise.entitlements */,
 				27B5B7B72AF8E27E00242456 /* AppDelegate.swift */,
 				27B5B7B92AF8E27E00242456 /* SceneDelegate.swift */,
-				27B5B7BB2AF8E27E00242456 /* ViewController.swift */,
-				27B5B7BD2AF8E27E00242456 /* Main.storyboard */,
+				27B5B7EC2AF8F0DB00242456 /* View */,
+				27B5B7EB2AF8F0CA00242456 /* ViewModel */,
+				27B5B7EA2AF8F0C100242456 /* Model */,
 				27B5B7C32AF8E28000242456 /* Assets.xcassets */,
 				27B5B7C52AF8E28000242456 /* LaunchScreen.storyboard */,
 				27B5B7C82AF8E28000242456 /* Info.plist */,
-				27B5B7C02AF8E27E00242456 /* TaskReminderOtherwise.xcdatamodeld */,
 			);
 			path = TaskReminderOtherwise;
 			sourceTree = "<group>";
@@ -130,9 +223,58 @@
 			path = TaskReminderOtherwiseUITests;
 			sourceTree = "<group>";
 		};
+		27B5B7EA2AF8F0C100242456 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27519D7E2AF95E4400FC48C1 /* TaskDetail+CoreDataClass.swift */,
+				27519D7F2AF95E4400FC48C1 /* TaskDetail+CoreDataProperties.swift */,
+				27B5B7C02AF8E27E00242456 /* TaskReminderOtherwise.xcdatamodeld */,
+				2798FD372AFAA23D006AFC75 /* TaskDetailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		27B5B7EB2AF8F0CA00242456 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				27B5B7ED2AF8FDE700242456 /* TaskReminderViewModel.swift */,
+				27519D822AF963B000FC48C1 /* CreateUpdateTaskViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		27B5B7EC2AF8F0DB00242456 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				27B5B7BB2AF8E27E00242456 /* ReminderHomeViewController.swift */,
+				27519D762AF9441D00FC48C1 /* AddUpdateReminderViewController.swift */,
+				27B5B7EF2AF9076C00242456 /* EachTaskReminderTableViewCell.swift */,
+				27519D842AF982F800FC48C1 /* TextViewEmbeddedTableViewCell.swift */,
+				27925E292AF9D8A10067A342 /* AddUpdateReminderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2798FD1B2AFA8536006AFC75 /* TaskReminderWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2798FD322AFA8538006AFC75 /* Build configuration list for PBXNativeTarget "TaskReminderWidgetExtension" */;
+			buildPhases = (
+				2798FD182AFA8536006AFC75 /* Sources */,
+				2798FD192AFA8536006AFC75 /* Frameworks */,
+				2798FD1A2AFA8536006AFC75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TaskReminderWidgetExtension;
+			productName = TaskReminderWidgetExtension;
+			productReference = 2798FD1C2AFA8536006AFC75 /* TaskReminderWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		27B5B7B32AF8E27E00242456 /* TaskReminderOtherwise */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27B5B7E12AF8E28000242456 /* Build configuration list for PBXNativeTarget "TaskReminderOtherwise" */;
@@ -140,10 +282,12 @@
 				27B5B7B02AF8E27E00242456 /* Sources */,
 				27B5B7B12AF8E27E00242456 /* Frameworks */,
 				27B5B7B22AF8E27E00242456 /* Resources */,
+				2798FD2F2AFA8538006AFC75 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2798FD2D2AFA8538006AFC75 /* PBXTargetDependency */,
 			);
 			name = TaskReminderOtherwise;
 			productName = TaskReminderOtherwise;
@@ -196,6 +340,9 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					2798FD1B2AFA8536006AFC75 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
 					27B5B7B32AF8E27E00242456 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -225,18 +372,26 @@
 				27B5B7B32AF8E27E00242456 /* TaskReminderOtherwise */,
 				27B5B7CC2AF8E28000242456 /* TaskReminderOtherwiseTests */,
 				27B5B7D62AF8E28000242456 /* TaskReminderOtherwiseUITests */,
+				2798FD1B2AFA8536006AFC75 /* TaskReminderWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2798FD1A2AFA8536006AFC75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2798FD2A2AFA8538006AFC75 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27B5B7B22AF8E27E00242456 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				27B5B7C72AF8E28000242456 /* LaunchScreen.storyboard in Resources */,
 				27B5B7C42AF8E28000242456 /* Assets.xcassets in Resources */,
-				27B5B7BF2AF8E27E00242456 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,14 +412,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2798FD182AFA8536006AFC75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2798FD352AFA9B40006AFC75 /* TaskDetail+CoreDataProperties.swift in Sources */,
+				2798FD242AFA8537006AFC75 /* TaskReminderWidgetBundle.swift in Sources */,
+				2798FD282AFA8537006AFC75 /* TaskReminderWidget.swift in Sources */,
+				2798FD392AFAA23D006AFC75 /* TaskDetailModel.swift in Sources */,
+				2798FD3A2AFAA539006AFC75 /* TaskReminderOtherwise.xcdatamodeld in Sources */,
+				2798FD262AFA8537006AFC75 /* TaskReminderWidgetLiveActivity.swift in Sources */,
+				2798FD342AFA9B3C006AFC75 /* TaskDetail+CoreDataClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27B5B7B02AF8E27E00242456 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B5B7BC2AF8E27E00242456 /* ViewController.swift in Sources */,
+				27B5B7EE2AF8FDE700242456 /* TaskReminderViewModel.swift in Sources */,
+				27519D832AF963B000FC48C1 /* CreateUpdateTaskViewModel.swift in Sources */,
+				27B5B7BC2AF8E27E00242456 /* ReminderHomeViewController.swift in Sources */,
+				27519D852AF982F800FC48C1 /* TextViewEmbeddedTableViewCell.swift in Sources */,
 				27B5B7C22AF8E27E00242456 /* TaskReminderOtherwise.xcdatamodeld in Sources */,
+				27519D772AF9441D00FC48C1 /* AddUpdateReminderViewController.swift in Sources */,
+				27519D802AF95E4400FC48C1 /* TaskDetail+CoreDataClass.swift in Sources */,
+				27519D812AF95E4400FC48C1 /* TaskDetail+CoreDataProperties.swift in Sources */,
+				2798FD382AFAA23D006AFC75 /* TaskDetailModel.swift in Sources */,
 				27B5B7B82AF8E27E00242456 /* AppDelegate.swift in Sources */,
 				27B5B7BA2AF8E27E00242456 /* SceneDelegate.swift in Sources */,
+				27B5B7F02AF9076C00242456 /* EachTaskReminderTableViewCell.swift in Sources */,
+				27925E2A2AF9D8A10067A342 /* AddUpdateReminderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +466,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2798FD2D2AFA8538006AFC75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2798FD1B2AFA8536006AFC75 /* TaskReminderWidgetExtension */;
+			targetProxy = 2798FD2C2AFA8538006AFC75 /* PBXContainerItemProxy */;
+		};
 		27B5B7CF2AF8E28000242456 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 27B5B7B32AF8E27E00242456 /* TaskReminderOtherwise */;
@@ -301,14 +484,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		27B5B7BD2AF8E27E00242456 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				27B5B7BE2AF8E27E00242456 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		27B5B7C52AF8E28000242456 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -320,6 +495,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2798FD302AFA8538006AFC75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TaskReminderWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LQA7377V4T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaskReminderWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TaskReminderWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.org.TaskReminderOtherwise.TaskReminderWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2798FD312AFA8538006AFC75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TaskReminderWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LQA7377V4T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaskReminderWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TaskReminderWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.org.TaskReminderOtherwise.TaskReminderWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		27B5B7DF2AF8E28000242456 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -437,15 +668,18 @@
 		27B5B7E22AF8E28000242456 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TaskReminderOtherwise/TaskReminderOtherwise.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LQA7377V4T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaskReminderOtherwise/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -455,6 +689,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.org.TaskReminderOtherwise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -464,15 +699,18 @@
 		27B5B7E32AF8E28000242456 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TaskReminderOtherwise/TaskReminderOtherwise.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LQA7377V4T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaskReminderOtherwise/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -482,6 +720,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.org.TaskReminderOtherwise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -563,6 +802,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2798FD322AFA8538006AFC75 /* Build configuration list for PBXNativeTarget "TaskReminderWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2798FD302AFA8538006AFC75 /* Debug */,
+				2798FD312AFA8538006AFC75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		27B5B7AF2AF8E27E00242456 /* Build configuration list for PBXProject "TaskReminderOtherwise" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
