@@ -8,32 +8,16 @@
 import Foundation
 import UIKit
 import CoreData
+import WidgetKit
 
 struct TaskReminderViewModel{
-    let context = {
-        let container = NSPersistentContainer(name: "TaskReminderOtherwise")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-        })
-        return container
-    }().viewContext
+    let context = PersistentContainer.shared.viewContext
     
     var performActionForTaskDetailValueChange: (()->Void)?
-    var loadVisibleCellsEveryOneMinute: (()->Void)?
     
     var taskDetails: [TaskDetail] = [] {
         didSet{
             performActionForTaskDetailValueChange?()
-        }
-    }
-    
-    func saveContext(){
-        do{
-            try context.save()
-        }catch(let err as NSError){
-            fatalError(err.localizedDescription)
         }
     }
     
@@ -52,6 +36,8 @@ struct TaskReminderViewModel{
         let taskDetail = self.taskDetails.remove(at: index)
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [taskDetail.id!.uuidString])
         context.delete(taskDetail)
+        PersistentContainer.shared.saveContext()
+        WidgetCenter.shared.reloadTimelines(ofKind: "TaskReminderWidget")
     }
     
     func getRemainingTimeFromTaskDetail(at index: Int) -> (String, UIColor){
@@ -75,7 +61,7 @@ struct TaskReminderViewModel{
             remainingTime += "\(mins) \(mins == 1 ? "min":"mins")"
         }
 
-        return (remainingTime, UIColor.tertiaryLabel)
+        return (remainingTime, UIColor.secondaryLabel)
     }
     
     

@@ -22,8 +22,8 @@
 		2798FD2E2AFA8538006AFC75 /* TaskReminderWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2798FD1C2AFA8536006AFC75 /* TaskReminderWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2798FD342AFA9B3C006AFC75 /* TaskDetail+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27519D7E2AF95E4400FC48C1 /* TaskDetail+CoreDataClass.swift */; };
 		2798FD352AFA9B40006AFC75 /* TaskDetail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27519D7F2AF95E4400FC48C1 /* TaskDetail+CoreDataProperties.swift */; };
-		2798FD382AFAA23D006AFC75 /* TaskDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2798FD372AFAA23D006AFC75 /* TaskDetailModel.swift */; };
-		2798FD392AFAA23D006AFC75 /* TaskDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2798FD372AFAA23D006AFC75 /* TaskDetailModel.swift */; };
+		2798FD382AFAA23D006AFC75 /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2798FD372AFAA23D006AFC75 /* PersistentContainer.swift */; };
+		2798FD392AFAA23D006AFC75 /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2798FD372AFAA23D006AFC75 /* PersistentContainer.swift */; };
 		2798FD3A2AFAA539006AFC75 /* TaskReminderOtherwise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27B5B7C02AF8E27E00242456 /* TaskReminderOtherwise.xcdatamodeld */; };
 		27B5B7B82AF8E27E00242456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5B7B72AF8E27E00242456 /* AppDelegate.swift */; };
 		27B5B7BA2AF8E27E00242456 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5B7B92AF8E27E00242456 /* SceneDelegate.swift */; };
@@ -91,7 +91,7 @@
 		2798FD272AFA8537006AFC75 /* TaskReminderWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskReminderWidget.swift; sourceTree = "<group>"; };
 		2798FD292AFA8538006AFC75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2798FD2B2AFA8538006AFC75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2798FD372AFAA23D006AFC75 /* TaskDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailModel.swift; sourceTree = "<group>"; };
+		2798FD372AFAA23D006AFC75 /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
 		2798FD3B2AFAAC65006AFC75 /* TaskReminderOtherwise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaskReminderOtherwise.entitlements; sourceTree = "<group>"; };
 		2798FD3C2AFAAD2F006AFC75 /* TaskReminderWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaskReminderWidgetExtension.entitlements; sourceTree = "<group>"; };
 		27B5B7B42AF8E27E00242456 /* TaskReminderOtherwise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskReminderOtherwise.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,7 +229,7 @@
 				27519D7E2AF95E4400FC48C1 /* TaskDetail+CoreDataClass.swift */,
 				27519D7F2AF95E4400FC48C1 /* TaskDetail+CoreDataProperties.swift */,
 				27B5B7C02AF8E27E00242456 /* TaskReminderOtherwise.xcdatamodeld */,
-				2798FD372AFAA23D006AFC75 /* TaskDetailModel.swift */,
+				2798FD372AFAA23D006AFC75 /* PersistentContainer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -419,7 +419,7 @@
 				2798FD352AFA9B40006AFC75 /* TaskDetail+CoreDataProperties.swift in Sources */,
 				2798FD242AFA8537006AFC75 /* TaskReminderWidgetBundle.swift in Sources */,
 				2798FD282AFA8537006AFC75 /* TaskReminderWidget.swift in Sources */,
-				2798FD392AFAA23D006AFC75 /* TaskDetailModel.swift in Sources */,
+				2798FD392AFAA23D006AFC75 /* PersistentContainer.swift in Sources */,
 				2798FD3A2AFAA539006AFC75 /* TaskReminderOtherwise.xcdatamodeld in Sources */,
 				2798FD262AFA8537006AFC75 /* TaskReminderWidgetLiveActivity.swift in Sources */,
 				2798FD342AFA9B3C006AFC75 /* TaskDetail+CoreDataClass.swift in Sources */,
@@ -438,7 +438,7 @@
 				27519D772AF9441D00FC48C1 /* AddUpdateReminderViewController.swift in Sources */,
 				27519D802AF95E4400FC48C1 /* TaskDetail+CoreDataClass.swift in Sources */,
 				27519D812AF95E4400FC48C1 /* TaskDetail+CoreDataProperties.swift in Sources */,
-				2798FD382AFAA23D006AFC75 /* TaskDetailModel.swift in Sources */,
+				2798FD382AFAA23D006AFC75 /* PersistentContainer.swift in Sources */,
 				27B5B7B82AF8E27E00242456 /* AppDelegate.swift in Sources */,
 				27B5B7BA2AF8E27E00242456 /* SceneDelegate.swift in Sources */,
 				27B5B7F02AF9076C00242456 /* EachTaskReminderTableViewCell.swift in Sources */,

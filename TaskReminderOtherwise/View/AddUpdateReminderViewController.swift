@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import WidgetKit
 
 class AddUpdateReminderViewController: UIViewController {
 
     let createUpdateTaskVM: CreateUpdateTaskViewModel
     let addUpdateReminderView = AddUpdateReminderView()
+    
     init(createUpdateTaskVM: CreateUpdateTaskViewModel) {
         self.createUpdateTaskVM = createUpdateTaskVM
         super.init(nibName: nil, bundle: nil)
@@ -33,9 +35,17 @@ class AddUpdateReminderViewController: UIViewController {
     
     private func _setUpTopBar(){
         self.title = "Task Detail"
-        let doneBtn = UIBarButtonItem(title: "\(createUpdateTaskVM.taskDetail == nil ? "Create": "Update")", style: .done, target: self, action: #selector(_doneBtnTapped))
+        let doneBtn = UIBarButtonItem(
+                        title: "\(createUpdateTaskVM.taskDetail == nil ? "Create": "Update")",
+                        style: .done,
+                        target: self,
+                        action: #selector(_doneBtnTapped))
         self.navigationController?.navigationBar.topItem?.rightBarButtonItem = doneBtn
-        let cancelBtn = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(_cancelBtnTapped))
+        let cancelBtn = UIBarButtonItem(
+                        title: "Cancel",
+                        style: .done,
+                        target: self,
+                        action: #selector(_cancelBtnTapped))
         self.navigationController?.navigationBar.topItem?.leftBarButtonItem = cancelBtn
     }
     
@@ -46,14 +56,17 @@ class AddUpdateReminderViewController: UIViewController {
             with: addUpdateReminderView.titleTextView.text,
             desc: addUpdateReminderView.descriptionTextView.text,
             date: addUpdateReminderView.datePicker.date,
-            time: addUpdateReminderView.timePicker.date) { [weak self] success in
+            time: addUpdateReminderView.timePicker.date) {
+                [weak self] success, msg in
                 guard let self = self else {return}
                 if success{
                     self._cancelBtnTapped()
+                    WidgetCenter.shared.reloadTimelines(ofKind: "TaskReminderWidget")
+                    
                 } else{
                     let alert = UIAlertController(
                         title: "Alert",
-                        message: "Something Went Wrong, Please Check",
+                        message: msg,
                         preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Okay", style: .cancel))
                     self.present(alert, animated: true)

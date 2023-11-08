@@ -18,7 +18,7 @@ struct Provider: TimelineProvider {
     func getSnapshot(in context: Context, completion: @escaping (TaskReminderEntry) -> ()) {
         let entry: TaskReminderEntry
         
-        if let taskDetail = TaskDetailModel.fetchUpcomingTask().first{
+        if let taskDetail = PersistentContainer.shared.fetchUpcomingTask().first{
             entry = TaskReminderEntry(date: Date(), title: taskDetail.taskTitle!, deadlineDate: taskDetail.deadlineDate!)
         }
         else{
@@ -31,16 +31,20 @@ struct Provider: TimelineProvider {
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [TaskReminderEntry] = []
         var currentDate = Date()
-        let taskDetails = TaskDetailModel.fetchUpcomingTask()
+        let taskDetails = PersistentContainer.shared.fetchUpcomingTask()
         
         for taskDetail in taskDetails {
-            let entry = TaskReminderEntry(date: currentDate, title: taskDetail.taskTitle!, deadlineDate: taskDetail.deadlineDate!)
+            let entry = TaskReminderEntry(
+                    date: currentDate,
+                    title: taskDetail.taskTitle!,
+                    deadlineDate: taskDetail.deadlineDate!)
             currentDate = taskDetail.deadlineDate!
             entries.append(entry)
         }
-        let entry = TaskReminderEntry(date: Date(), title: "Task Name", deadlineDate: Date(timeIntervalSinceNow: 1000))
-        entries.append(entry)
-        let timeline = Timeline(entries: entries, policy: .after(entries.last?.deadlineDate ?? Date(timeIntervalSinceNow: 60*15)))
+
+        let timeline = Timeline(
+                entries: entries,
+                policy: .after(entries.last?.deadlineDate ?? Date(timeIntervalSinceNow: 60)))
         completion(timeline)
     }
 }
@@ -56,12 +60,37 @@ struct TaskReminderWidgetEntryView : View {
 
     var body: some View {
         VStack(alignment: .center) {
-            Text(entry.title)
             HStack{
-                Text("Remaining time: ")
-                Text(timerInterval: entry.date...entry.deadlineDate, countsDown: true, showsHours: true)
+                Text("Task:")
+                    .font(.subheadline)
+                    .fontWeight(.medium)
+                Spacer()
             }
+                
+            HStack{
+                Text(entry.title)
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.orange)
+                    
+                Spacer()
+            }
+            Spacer()
+            HStack{
+                Text(" Time Left: ")
+                    .font(.subheadline)
+                Text(
+                    timerInterval: entry.date...entry.deadlineDate,
+                    countsDown: true,
+                    showsHours: true)
+                .font(.headline)
+                .frame(maxWidth: 100)
+                Spacer()
+
+            }
+
         }
+        .padding(.all)
 
     }
 }
@@ -74,14 +103,14 @@ struct TaskReminderWidget: Widget {
             TaskReminderWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("Task Reminder")
-        .description("This will inform your task deadline")
+        .description("This will inform deadline of your tasks")
 
     }
 }
 
 struct TaskReminderWidget_Previews: PreviewProvider {
     static var previews: some View {
-        TaskReminderWidgetEntryView(entry: TaskReminderEntry(date: Date(), title: "", deadlineDate: Date()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        TaskReminderWidgetEntryView(entry: TaskReminderEntry(date: Date(), title: "Task", deadlineDate: Date(timeIntervalSinceNow: 1000)))
+            .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }

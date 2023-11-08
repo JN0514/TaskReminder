@@ -10,7 +10,7 @@ import UIKit
 
 struct CreateUpdateTaskViewModel{
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let context = PersistentContainer.shared.viewContext
 
     var notifyAddedOrUpdatedStatus: (()->Void)?
     
@@ -36,9 +36,9 @@ struct CreateUpdateTaskViewModel{
         self.taskDetail = taskDetail
     }
     
-    func createOrUpdateTask(with title: String, desc: String, date: Date, time: Date, completionHandler: @escaping (Bool)->Void?){
+    func createOrUpdateTask(with title: String, desc: String, date: Date, time: Date, completionHandler: @escaping (Bool, String)->Void?){
         guard !title.isEmpty && !desc.isEmpty else{
-            completionHandler(false)
+            completionHandler(false, "Please enter task name and task description")
             return
         }
         
@@ -55,7 +55,7 @@ struct CreateUpdateTaskViewModel{
             minute: timeComponents.minute)
         
         guard let combinedDate = calender.date(from: combinedComponents), combinedDate > Date() else {
-            completionHandler(false)
+            completionHandler(false, "Please set future dates as deadline date")
             return
         }
         
@@ -72,7 +72,8 @@ struct CreateUpdateTaskViewModel{
             newTask.deadlineDate = combinedDate
             self.scheduleNotification(with: newTask.id!, title: title, subTitle: desc, date: combinedDate)
         }
-        completionHandler(true)
+        PersistentContainer.shared.saveContext()
+        completionHandler(true, "success")
         self.notifyAddedOrUpdatedStatus?()
     }
     

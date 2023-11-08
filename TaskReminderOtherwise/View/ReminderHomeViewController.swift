@@ -11,12 +11,6 @@ class ReminderHomeViewController: UITableViewController {
 
     var taskReminderVM = TaskReminderViewModel()
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.taskReminderVM.getTaskDetails()
@@ -25,7 +19,7 @@ class ReminderHomeViewController: UITableViewController {
     }
 
     @objc
-    private func btnTappedToCreateNewReminder(){
+    private func btnTappedToCreateTaskReminder(){
         var createUpdateVM = CreateUpdateTaskViewModel()
         createUpdateVM.notifyAddedOrUpdatedStatus = {
             [weak self] in
@@ -49,7 +43,7 @@ class ReminderHomeViewController: UITableViewController {
             NSAttributedString.Key.font: UIFont.systemFont(ofSize: 38, weight: .bold)
         ]
         
-        let addBtn = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(btnTappedToCreateNewReminder))
+        let addBtn = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(btnTappedToCreateTaskReminder))
         addBtn.tintColor = UIColor.orange
         self.navigationController?.navigationBar.topItem?.leftBarButtonItem = addBtn
         
@@ -72,7 +66,7 @@ class ReminderHomeViewController: UITableViewController {
     
 }
 
-//Datasource
+// MARK: - UITableViewDataSource
 extension ReminderHomeViewController{
     override func numberOfSections(in tableView: UITableView) -> Int {
         1
@@ -92,7 +86,7 @@ extension ReminderHomeViewController{
     
 }
 
-
+// MARK: - UITableViewDelegate
 extension ReminderHomeViewController{
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
