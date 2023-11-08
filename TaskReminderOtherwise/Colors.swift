@@ -10,6 +10,7 @@ import UIKit
 struct ThemeColor{
     static var shared = ThemeColor()
     
+    //Property to determine, dark mode or light mode
     var isDark: Bool{
         get{
             UserDefaults.standard.bool(forKey: "isDark")

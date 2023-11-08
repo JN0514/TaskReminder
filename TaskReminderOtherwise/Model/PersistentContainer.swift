@@ -10,6 +10,9 @@ import CoreData
 
 class PersistentContainer: NSPersistentContainer{
     
+//This class is responsible for sharing core data between Application and widget extension.
+    
+    //Singleton Class
     static let shared: PersistentContainer = {
         guard let modelURL = Bundle.main.url(forResource: "TaskReminderOtherwise",
                                              withExtension: "momd") else {
@@ -29,6 +32,7 @@ class PersistentContainer: NSPersistentContainer{
         return container
     }()
     
+    //Shared Directory for Widget Extension and Application
     override class func defaultDirectoryURL() -> URL {
         return FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.org.TaskReminderOtherwise.app")!
     }
@@ -37,6 +41,7 @@ class PersistentContainer: NSPersistentContainer{
         super.init(name: name, managedObjectModel: model)
     }
     
+    //Saving changes in context to Persistent store
     func saveContext () {
         let context = PersistentContainer.shared.viewContext
         if context.hasChanges {
@@ -49,6 +54,8 @@ class PersistentContainer: NSPersistentContainer{
         }
     }
     
+    //Fetching only upcoming task in a sorted order.
+    //Helpful to create timeline entries for widget.
     func fetchUpcomingTask() -> [TaskDetail] {
         let context = PersistentContainer.shared.viewContext
         
@@ -61,10 +68,8 @@ class PersistentContainer: NSPersistentContainer{
         }
     }
     
-    //Implementaion of Importing and Exporting Core Data is in Progress
-    
+    //Implementaion of Importing and Exporting Core Data is in Progress.
     /*
-     
      private let _coreDataBackUp = "CoreDataBackUp.dat"
 
     func exportCoreData(){

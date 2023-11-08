@@ -8,7 +8,8 @@
 import UIKit
 
 class ReminderHomeViewController: UITableViewController {
-
+//This Controller lists the tasks Reminder.
+//Also acts as intermediary for TaskReminderViewModel and EachTaskReminderTableViewCell interact with
     var taskReminderVM = TaskReminderViewModel()
     
     override func viewDidLoad() {
@@ -21,6 +22,7 @@ class ReminderHomeViewController: UITableViewController {
     @objc
     private func btnTappedToCreateTaskReminder(){
         var createUpdateVM = CreateUpdateTaskViewModel()
+        //Acts as Observer, for creating or updating Task.
         createUpdateVM.notifyAddedOrUpdatedStatus = {
             [weak self] in
             self?.taskReminderVM.getTaskDetails()
@@ -104,6 +106,7 @@ extension ReminderHomeViewController{
 extension ReminderHomeViewController{
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        //Creating View model with initializer of TaskDetail for task updation.
         var createUpdateTaskVM = CreateUpdateTaskViewModel(taskDetail: self.taskReminderVM.taskDetails[indexPath.row])
         createUpdateTaskVM.notifyAddedOrUpdatedStatus = {
             [weak self] in

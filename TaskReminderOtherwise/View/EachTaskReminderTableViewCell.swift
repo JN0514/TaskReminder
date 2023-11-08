@@ -8,8 +8,7 @@
 import UIKit
 
 class EachTaskReminderTableViewCell: UITableViewCell {
-
-    let notificationCenter = NotificationCenter.default
+//TaskReminderViewModel exposes data to this Cell
     
     static let identifier = "EachTaskReminderTableViewCell"
     
@@ -132,12 +131,17 @@ class EachTaskReminderTableViewCell: UITableViewCell {
         self.timerLbl.text = "Remaining Time: \(time)"
         self.timerLbl.textColor = color
         
-        self.timer = Timer(fire: taskReminderVM.calculateNextMinuteToStartFireTimer(), interval: 60, repeats: true){ [weak self] timer in
-            guard let self = self else{return}
-            let (time, color) = taskReminderVM.getRemainingTimeFromTaskDetail(at: index)
-            self.timerLbl.text = "Remaining Time: \(time)"
-            self.timerLbl.textColor = color
-        }
+        //Timer to calculate remaining time, every with 1 minute interval.
+        self.timer = Timer(
+            fire: taskReminderVM.calculateNextMinuteToStartFireTimer(),
+            interval: 60,
+            repeats: true){
+                [weak self] timer in
+                guard let self = self else{return}
+                let (time, color) = taskReminderVM.getRemainingTimeFromTaskDetail(at: index)
+                self.timerLbl.text = "Remaining Time: \(time)"
+                self.timerLbl.textColor = color
+            }
         
         RunLoop.current.add(self.timer, forMode: .default)
     }

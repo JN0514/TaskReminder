@@ -81,7 +81,7 @@ extension TextViewEmbeddedTableViewCell: UITextViewDelegate{
     }
     
     func adjustTextViewHeight(_ textView: UITextView) {
-        let fixedWidth = self.frame.size.width
+
         let newSize = textView.sizeThatFits(CGSize(width: textView.frame.size.width, height: .greatestFiniteMagnitude))
 
         if (newSize.height+10) > self.frame.size.height{
