@@ -33,6 +33,8 @@ class ReminderHomeViewController: UITableViewController {
     
     private func _setupNavBar(){
         self.title = "Reminder"
+        self.overrideUserInterfaceStyle = ThemeColor.shared.userInterfaceStyle
+        self.navigationController?.overrideUserInterfaceStyle = ThemeColor.shared.userInterfaceStyle
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.systemOrange,
@@ -45,8 +47,12 @@ class ReminderHomeViewController: UITableViewController {
         
         let addBtn = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(btnTappedToCreateTaskReminder))
         addBtn.tintColor = UIColor.orange
-        self.navigationController?.navigationBar.topItem?.leftBarButtonItem = addBtn
         
+        let img = UIImage(systemName: "\(ThemeColor.shared.isDark ? "lightbulb.fill" : "lightbulb.slash.fill")")
+        let themeBtn = UIBarButtonItem(image: img, style: .done, target: self, action: #selector(themeTransitionBtnTapped))
+        themeBtn.tintColor = UIColor.orange
+        self.navigationController?.navigationBar.topItem?.leftBarButtonItems = [addBtn, themeBtn]
+
         self.navigationController?.navigationBar.topItem?.rightBarButtonItem = editButtonItem
         self.navigationController?.navigationBar.topItem?.rightBarButtonItem?.setTitleTextAttributes([
             NSAttributedString.Key.font : UIFont.systemFont(ofSize: 20, weight: .medium),
@@ -64,6 +70,14 @@ class ReminderHomeViewController: UITableViewController {
         }
     }
     
+    
+    @objc
+    private func themeTransitionBtnTapped(){
+        ThemeColor.shared.isDark.toggle()
+        if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate{
+            sceneDelegate.window?.rootViewController = UINavigationController(rootViewController: ReminderHomeViewController())
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource

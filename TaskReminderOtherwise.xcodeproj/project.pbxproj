@@ -36,6 +36,8 @@
 		27B5B7DE2AF8E28000242456 /* TaskReminderOtherwiseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5B7DD2AF8E28000242456 /* TaskReminderOtherwiseUITestsLaunchTests.swift */; };
 		27B5B7EE2AF8FDE700242456 /* TaskReminderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5B7ED2AF8FDE700242456 /* TaskReminderViewModel.swift */; };
 		27B5B7F02AF9076C00242456 /* EachTaskReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5B7EF2AF9076C00242456 /* EachTaskReminderTableViewCell.swift */; };
+		27F94EC02AFB53B5006AE412 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F94EBF2AFB53B5006AE412 /* Colors.swift */; };
+		27F94EC12AFB53B5006AE412 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F94EBF2AFB53B5006AE412 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,7 @@
 		27B5B7DD2AF8E28000242456 /* TaskReminderOtherwiseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskReminderOtherwiseUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		27B5B7ED2AF8FDE700242456 /* TaskReminderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskReminderViewModel.swift; sourceTree = "<group>"; };
 		27B5B7EF2AF9076C00242456 /* EachTaskReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachTaskReminderTableViewCell.swift; sourceTree = "<group>"; };
+		27F94EBF2AFB53B5006AE412 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +199,7 @@
 				2798FD3B2AFAAC65006AFC75 /* TaskReminderOtherwise.entitlements */,
 				27B5B7B72AF8E27E00242456 /* AppDelegate.swift */,
 				27B5B7B92AF8E27E00242456 /* SceneDelegate.swift */,
+				27F94EBF2AFB53B5006AE412 /* Colors.swift */,
 				27B5B7EC2AF8F0DB00242456 /* View */,
 				27B5B7EB2AF8F0CA00242456 /* ViewModel */,
 				27B5B7EA2AF8F0C100242456 /* Model */,
@@ -419,6 +423,7 @@
 				2798FD352AFA9B40006AFC75 /* TaskDetail+CoreDataProperties.swift in Sources */,
 				2798FD242AFA8537006AFC75 /* TaskReminderWidgetBundle.swift in Sources */,
 				2798FD282AFA8537006AFC75 /* TaskReminderWidget.swift in Sources */,
+				27F94EC12AFB53B5006AE412 /* Colors.swift in Sources */,
 				2798FD392AFAA23D006AFC75 /* PersistentContainer.swift in Sources */,
 				2798FD3A2AFAA539006AFC75 /* TaskReminderOtherwise.xcdatamodeld in Sources */,
 				2798FD262AFA8537006AFC75 /* TaskReminderWidgetLiveActivity.swift in Sources */,
@@ -443,6 +448,7 @@
 				27B5B7BA2AF8E27E00242456 /* SceneDelegate.swift in Sources */,
 				27B5B7F02AF9076C00242456 /* EachTaskReminderTableViewCell.swift in Sources */,
 				27925E2A2AF9D8A10067A342 /* AddUpdateReminderView.swift in Sources */,
+				27F94EC02AFB53B5006AE412 /* Colors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

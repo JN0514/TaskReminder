@@ -59,7 +59,6 @@ class EachTaskReminderTableViewCell: UITableViewCell {
         timerLbl.numberOfLines = 0
         timerLbl.translatesAutoresizingMaskIntoConstraints = false
         timerLbl.textAlignment = .left
-        timerLbl.textColor = UIColor.tertiaryLabel
         timerLbl.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         self.timerLbl = timerLbl
         self.contentView.addSubview(timerLbl)

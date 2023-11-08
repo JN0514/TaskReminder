@@ -35,6 +35,12 @@ class AddUpdateReminderViewController: UIViewController {
     
     private func _setUpTopBar(){
         self.title = "Task Detail"
+
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.label,
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: .semibold)
+        ]
+        
         let doneBtn = UIBarButtonItem(
                         title: "\(createUpdateTaskVM.taskDetail == nil ? "Create": "Update")",
                         style: .done,
