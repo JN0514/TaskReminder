@@ -11,16 +11,21 @@ import CoreData
 import WidgetKit
 
 struct TaskReminderViewModel{
+// ViewModel to list fetch and delete tasks
     let context = PersistentContainer.shared.viewContext
-    
+
+    //This handler is to notify table view to reload
     var performActionForTaskDetailValueChange: (()->Void)?
     
+    //When this property changes table view will be notified.
     var taskDetails: [TaskDetail] = [] {
         didSet{
             performActionForTaskDetailValueChange?()
         }
     }
     
+    //Fetching Tasks in Core data and list them in sorted order.
+    //Completed Tasks will be after upcoming tasks.
     mutating func getTaskDetails(){
         do{
             let tasks = try context.fetch(TaskDetail.fetchRequest())
@@ -32,6 +37,7 @@ struct TaskReminderViewModel{
         }
     }
     
+    //Delete and remove the task at this index from taskdetails list and coredata.
     mutating func deleteTaskDetail(at index: Int){
         let taskDetail = self.taskDetails.remove(at: index)
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [taskDetail.id!.uuidString])
@@ -41,6 +47,9 @@ struct TaskReminderViewModel{
         WidgetCenter.shared.reloadTimelines(ofKind: "TaskReminderWidget")
     }
     
+    //This is to get the time difference in days, hours and minutes of a task at this index in taskdetails.
+    //When the difference is negative, displaying task is overdue.
+    //
     func getRemainingTimeFromTaskDetail(at index: Int) -> (String, UIColor){
         let curDate = Date()
         var remainingTime = ""
@@ -65,7 +74,8 @@ struct TaskReminderViewModel{
         return (remainingTime, UIColor.secondaryLabel)
     }
     
-    
+    //This is to calculate when to start firing timer.
+    //This is helpful, to be in sync with system clock.
     func calculateNextMinuteToStartFireTimer() -> Date{
         let calender = Calendar.current
         let components = calender.dateComponents([ .second], from: Date())

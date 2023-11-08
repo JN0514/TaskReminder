@@ -9,7 +9,9 @@ import UIKit
 import WidgetKit
 
 class AddUpdateReminderViewController: UIViewController {
-
+//ViewController to Add and Update Task.
+//Acts as intermediary, for CreateUpdateTaskViewModel and AddUpdateReminderView to interact with
+    
     let createUpdateTaskVM: CreateUpdateTaskViewModel
     let addUpdateReminderView = AddUpdateReminderView()
     
@@ -64,6 +66,7 @@ class AddUpdateReminderViewController: UIViewController {
             date: addUpdateReminderView.datePicker.date,
             time: addUpdateReminderView.timePicker.date) {
                 [weak self] success, msg in
+                //On Successful Task Creation, Reload Widget timelines and dismiss controller
                 guard let self = self else {return}
                 if success{
                     self._cancelBtnTapped()

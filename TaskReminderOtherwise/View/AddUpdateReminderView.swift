@@ -8,6 +8,7 @@
 import UIKit
 
 class AddUpdateReminderView: UIView {
+//CreateUpdateTaskViewModel exposes data to this view
     
     weak var scrollView: UIScrollView!
     weak var contentView: UIView!

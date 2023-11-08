@@ -9,11 +9,14 @@ import Foundation
 import UIKit
 
 struct CreateUpdateTaskViewModel{
-    
+// This View Model is to Create New Task and Update Existing Task.
     let context = PersistentContainer.shared.viewContext
 
+    //This handler is to Notify Objects, upon completion of task creation or updation.
     var notifyAddedOrUpdatedStatus: (()->Void)?
     
+    //Set value to this property, during task updation
+    //For task creation, leave this property as nil
     let taskDetail: TaskDetail?
     
     var taskTitle: String? {
@@ -36,7 +39,11 @@ struct CreateUpdateTaskViewModel{
         self.taskDetail = taskDetail
     }
     
+    
+    //This method is to create or update task.
     func createOrUpdateTask(with title: String, desc: String, date: Date, time: Date, completionHandler: @escaping (Bool, String)->Void?){
+        
+        //Show Alert, when there is title or description
         guard !title.isEmpty && !desc.isEmpty else{
             completionHandler(false, "Please enter task name and task description")
             return
@@ -54,6 +61,7 @@ struct CreateUpdateTaskViewModel{
             hour: timeComponents.hour,
             minute: timeComponents.minute)
         
+        //Show Alert, when choosen deadline date is not upcoming dates
         guard let combinedDate = calender.date(from: combinedComponents), combinedDate > Date() else {
             completionHandler(false, "Please set future dates as deadline date")
             return
@@ -78,10 +86,13 @@ struct CreateUpdateTaskViewModel{
         self.notifyAddedOrUpdatedStatus?()
     }
     
+    //This method is schedule Local Notifcation with following parameters.
     private func scheduleNotification(with id: UUID, title: String, subTitle: String, date: Date){
         let unUserNotificationCenter = UNUserNotificationCenter.current()
+        //If any notification is pending with this "ID", remove it.
         unUserNotificationCenter.removePendingNotificationRequests(withIdentifiers: [id.uuidString])
         
+        //Take differences of current date and date to trigger notifications, in seconds.
         let calender = Calendar.current
         let components = calender.dateComponents([.second], from: Date(), to: date)
 
