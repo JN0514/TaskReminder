@@ -37,6 +37,7 @@ struct TaskReminderViewModel{
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [taskDetail.id!.uuidString])
         context.delete(taskDetail)
         PersistentContainer.shared.saveContext()
+//        PersistentContainer.shared.exportCoreData()
         WidgetCenter.shared.reloadTimelines(ofKind: "TaskReminderWidget")
     }
     

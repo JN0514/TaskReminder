@@ -104,7 +104,7 @@ struct TaskReminderWidget: Widget {
         }
         .configurationDisplayName("Task Reminder")
         .description("This will inform deadline of your tasks")
-
+        .supportedFamilies([.systemMedium])
     }
 }
 

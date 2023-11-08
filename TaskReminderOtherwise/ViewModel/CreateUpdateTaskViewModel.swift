@@ -73,6 +73,7 @@ struct CreateUpdateTaskViewModel{
             self.scheduleNotification(with: newTask.id!, title: title, subTitle: desc, date: combinedDate)
         }
         PersistentContainer.shared.saveContext()
+//        PersistentContainer.shared.exportCoreData()
         completionHandler(true, "success")
         self.notifyAddedOrUpdatedStatus?()
     }
