@@ -142,6 +142,7 @@ class AddUpdateReminderView: UIView {
         datePicker.locale = Locale.current
         datePicker.datePickerMode = .date
         datePicker.preferredDatePickerStyle = .inline
+        datePicker.addTarget(self, action: #selector(setDate(_:)), for: .valueChanged)
         self.datePicker = datePicker
         self.dateTimeBGView.addSubview(datePicker)
         
@@ -166,6 +167,18 @@ class AddUpdateReminderView: UIView {
         timePicker.preferredDatePickerStyle = .wheels
         self.timePicker = timePicker
         self.dateTimeBGView.addSubview(timePicker)
+    }
+    
+    @objc
+    private func setDate(_ datePicker: UIDatePicker){
+        self.dateHeadingLbl.text = getDateInStr(date: datePicker.date)
+    }
+    
+    private func getDateInStr(date: Date) -> String{
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = "MMM d, yyyy"
+        let dateStr = dateFormat.string(from: datePicker.date)
+        return "Date:      \(dateStr)"
     }
     
     private func _setUpConstraints(){
@@ -335,8 +348,12 @@ class AddUpdateReminderView: UIView {
     func setValues(createUpdateTaskVM: CreateUpdateTaskViewModel){
         self.titleTextView.text = createUpdateTaskVM.taskTitle
         self.descriptionTextView.text = createUpdateTaskVM.taskDescription
+        self.dateHeadingLbl.text = getDateInStr(date: createUpdateTaskVM.date)
         self.datePicker.date = createUpdateTaskVM.date
         self.timePicker.date = createUpdateTaskVM.time
+        if Date()>createUpdateTaskVM.date{
+            self.backgroundColor = .red
+        }
     }
     
     @objc

@@ -54,7 +54,7 @@ struct TaskReminderViewModel{
         let curDate = Date()
         var remainingTime = ""
         guard let deadlineDate = self.taskDetails[index].deadlineDate else {return ("", UIColor.tertiaryLabel)}
-        guard deadlineDate > curDate else {return ("Overdue", UIColor.systemRed)}
+        guard deadlineDate > curDate else {return ("Overdue", UIColor.systemBlue)}
         let components = Calendar.current.dateComponents([.day, .hour, .minute, .second], from: curDate, to: deadlineDate)
         if let days = components.day, days != 0{
             remainingTime = "\(days) \(days == 1 ? "day":"days"), "
